@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="5.0" group="system" method="upgrade">
+    <name>System - Obox Link Multi</name>
+    <author>Mark Lehmbach</author>
+    <version>1.5.0</version>
+    <description>Fügt mehrere benutzerdefinierte Links als Boxen im Admin-Dashboard hinzu, jede Box mit eigenem Farbschema</description>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="links" type="subform" label="Links" description="Füge beliebig viele Links hinzu.">
+                    <form>
+                        <fields name="params">
+                            <field name="url" type="url" label="URL" description="Link-Adresse" />
+                            <field name="text" type="text" label="Text" description="Angezeigter Text" />
+                            <field name="icon" type="text" label="Icon (FontAwesome)" description="z.B. fa-solid fa-link" default="fa-solid fa-link" />
+                            <field name="bg_color" type="color" label="Hintergrundfarbe" description="Hintergrundfarbe der Box" default="#f5f5f5" />
+                            <field name="border_color" type="color" label="Randfarbe" description="Link-Randfarbe" default="#007BFF" />
+                            <field name="icon_color" type="color" label="Icon-Farbe" description="Farbe des Icons (optional)" default="" />
+                        </fields>
+                    </form>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <files>
+        <filename plugin="oboxlink-multi">oboxlink-multi.php</filename>
+    </files>
+</extension>
