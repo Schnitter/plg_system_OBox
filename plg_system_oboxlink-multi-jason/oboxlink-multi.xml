@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="5.0" group="system" method="upgrade">
+    <name>System - Obox Link Multi</name>
+    <author>Mark Lehmbach</author>
+    <version>1.3.0</version>
+    <description>Fügt mehrere benutzerdefinierte Links als Boxen im Admin-Dashboard hinzu</description>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="links_json" type="textarea" label="Links JSON" description='Gib die Links als JSON-Array ein. Beispiel:
+[
+    {"url":"https://example.com","text":"Beispiel Link 1","icon":"fa-solid fa-link"},
+    {"url":"https://example2.com","text":"Beispiel Link 2","icon":"fa-solid fa-star"}
+]'
+                default='[
+    {"url":"https://example.com","text":"Beispiel Link 1","icon":"fa-solid fa-link"},
+    {"url":"https://example2.com","text":"Beispiel Link 2","icon":"fa-solid fa-star"}
+]' />
+            </fieldset>
+        </fields>
+    </config>
+
+    <files>
+        <filename plugin="oboxlink-multi">oboxlink-multi.php</filename>
+    </files>
+</extension>
